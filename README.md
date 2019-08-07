@@ -1,8 +1,6 @@
 # LostAndHounds
 
 #Introduction
-To be filled in later
-<br><br>
 Commands needed to start up the server for local testing:<br><br>
 Change directories so that you are in the LostAndHounds folder using terminal/command prompt, then type the following
 <br><br>
