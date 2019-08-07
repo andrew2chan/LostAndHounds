@@ -1,0 +1,29 @@
+nav {
+  background-color: #fafafa;
+  box-shadow: 0 1px 5px limegreen !important;
+  height: 64px;
+}
+
+nav {
+  .nav-wrapper {
+    transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out;
+  }
+}
+
+nav {
+  a {
+    color: limegreen;
+  }
+}
+
+nav {
+  ul {
+    a {
+      color: limegreen;
+    }
+    a:hover {
+      background-color: rgb(225,225,225);
+    }
+  }
+}

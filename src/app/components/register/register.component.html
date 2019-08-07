@@ -1,0 +1,74 @@
+<div class="outerContainer">
+<div class="container">
+  <form class="col s12" (submit)="onRegisterSubmit()">
+    <div class="row"> <!-- tabs -->
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s6"><a [routerLink]="['/login']">Login</a></li>
+          <li class="tab col s6"><a [routerLink]="['/register']" [routerLinkActive]="['active']">Sign up</a></li>
+        </ul>
+      </div>
+    </div> <!-- tab end -->
+
+    <div class="row"> <!-- first and last name -->
+      <div class="col s12">
+        <div class="col s6">
+          <input placeholder="First Name" id="first_name" type="text" class="validate" [(ngModel)]="firstName" name="firstName">
+        </div>
+        <div class="col s6">
+          <input placeholder="Last Name" id="last_name" type="text" class="validate" [(ngModel)]="lastName" name="lastName">
+        </div>
+      </div>
+    </div> <!-- first and last end -->
+
+    <div class="row">
+      <div class="col s12">
+        <div class="col s6"> <!-- username & pass -->
+          <input placeholder="Username" id="new_username" type="text" class="validate" [(ngModel)]="username" name="username">
+        </div>
+        <div class="col s6">
+          <input placeholder="Password" id="new_password" type="password" class="validate" [(ngModel)]="password" name="password">
+        </div> <!-- username & password end -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="col s6"> <!-- email-->
+          <input placeholder="Email (IE. x@x.com)" id="email_address" type="text" class="validate" [(ngModel)]="email" (ngModelChange)="compareEmails()" name="email">
+        </div>
+        <div class="col s6">
+          <input placeholder="Re-enter Email (IE. x@x.com)" id="confirm_email_address" type="text" class="validate" [(ngModel)]="confirmEmail" (ngModelChange)="compareEmails()" name="confirmEmail">
+        </div> <!-- email end -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="col s3"></div>
+        <div id="errorText" class="col s6" #error></div>
+        <div class="col s3"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="col s2"></div>
+
+        <button class="btn waves-effect waves-light col s3" type="reset" name="action">
+          Clear Form
+        </button>
+
+        <div class="col s2"></div>
+
+        <button class="btn waves-effect waves-light col s3" type="submit" name="action">
+          Submit
+        </button>
+
+        <div class="col s2"></div>
+      </div>
+    </div>
+
+  </form>
+</div>
+</div>

@@ -1,0 +1,31 @@
+<agm-map [latitude]="lat" [longitude]="lng" (mapClick)="placeMarker($event)">
+  <agm-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng" [animation]="marker.animate" (markerClick)="markerClicked(marker)">
+
+  </agm-marker>
+
+</agm-map>
+
+<div class="sidebar" #infoFormContainer>
+  <form (submit)="onInfoSubmit()" #infoForm>
+    <button type="button" id="close" (click)="closeSide()">X</button>
+    <br/><br/>
+    Pet name: <input type="text" [(ngModel)]="petName" name="petName">
+    Name: <input type="text" [(ngModel)]="name" name="name">
+    Phone number: <input type="tel" [(ngModel)]="phone" name="phone" placeholder="">
+    <div class="errorMesssage" #validatePhoneMessage>Please enter a valid phone number.</div>
+    Email address: <input type="email" [(ngModel)]="email" name="email" placeholder="">
+    <div class="errorMesssage" #validateEmailMessage>Please enter a valid email address.</div>
+    Description: <textarea [(ngModel)]="description" name="description"></textarea>
+    <button type="submit" name="action">Submit</button>
+  </form>
+</div>
+
+<div class="sidebar" #infoFormContainerDisplay>
+  <button type="button" id="close" (click)="closeSideDisplay()">X</button>
+  <br/><br/>
+  Pet name: <input type="text" [(ngModel)]="petNameDisplay" name="petNameDisplay" readonly>
+  Name: <input type="text" [(ngModel)]="nameDisplay" name="nameDisplay" readonly>
+  Phone number: <input type="tel" [(ngModel)]="phoneDisplay" name="phoneDisplay" readonly>
+  Email address: <input type="email" [(ngModel)]="emailDisplay" name="emailDisplay" readonly>
+  Description: <textarea [(ngModel)]="descriptionDisplay" name="descriptionDisplay" readonly></textarea>
+</div>

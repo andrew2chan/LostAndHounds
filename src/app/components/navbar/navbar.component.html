@@ -1,0 +1,22 @@
+<nav>
+  <div class="nav-wrapper" #navwrap>
+    <a [routerLink]="['/']" (click)="changeBackground($event)">{{title}}</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a [routerLink]="['/login']" *ngIf="!authservice.loggedIn()" (click)="changeBackground($event)">Login</a></li> <!-- goes to login route -->
+      <li><a [routerLink]="['/main']" *ngIf="authservice.loggedIn()" (click)="changeBackground($event)">Map</a></li> <!-- goes to map route -->
+      <li><a [routerLink]="['/profile']" *ngIf="authservice.loggedIn()" (click)="changeBackground($event)">Profile</a></li> <!-- goes to profile route -->
+      <li><a href="#" (click)="onLogout()" *ngIf="authservice.loggedIn()" (click)="changeBackground($event)">Logout</a></li> <!-- logout -->
+      <li><a [routerLink]="['/register']" *ngIf="!authservice.loggedIn()" (click)="changeBackground($event)">Sign Up</a></li> <!-- go to register route -->
+    </ul>
+
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+  <li><a class="sidenav-close" [routerLink]="['/login']" *ngIf="!authservice.loggedIn()">Login</a></li> <!-- goes to login route -->
+  <li><a class="sidenav-close" [routerLink]="['/map']" *ngIf="authservice.loggedIn()">Map</a></li>
+  <li><a class="sidenav-close" [routerLink]="['/profile']" *ngIf="authservice.loggedIn()">Profile</a></li> <!-- goes to profile route -->
+  <li><a class="sidenav-close" href="#" (click)="onLogout()" *ngIf="authservice.loggedIn()">Logout</a></li> <!-- logout -->
+  <li><a class="sidenav-close" [routerLink]="['/register']" *ngIf="!authservice.loggedIn()">Sign Up</a></li> <!-- go to register route -->
+</ul>

@@ -1,0 +1,55 @@
+<div class="container">
+  <form class="col s12" (submit)="onLoginSubmit()">
+    <div class="row"> <!-- tabs -->
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s6"><a [routerLink]="['/login']" class="active">Login</a></li>
+          <li class="tab col s6"><a [routerLink]="['/register']">Sign up</a></li>
+        </ul>
+      </div>
+    </div> <!-- tab end -->
+
+    <div class="row">
+      <div class="col s12">
+        <div class="col s12">
+          <input placeholder="Username" id="username" type="text" class="validate" [(ngModel)]="username" name="username">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="col s12">
+          <input placeholder="Password" id="password" type="password" class="validate" [(ngModel)]="password" name="password">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="col s3"></div>
+        <div id="errorText" class="col s6" #error></div>
+        <div class="col s3"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="col s2"></div>
+
+        <button class="btn waves-effect waves-light col s3" type="reset" name="action">
+          Clear Form
+        </button>
+
+        <div class="col s2"></div>
+
+        <button class="btn waves-effect waves-light col s3" type="submit" name="action">
+          Submit
+        </button>
+
+        <div class="col s2"></div>
+      </div>
+    </div>
+
+  </form>
+</div>

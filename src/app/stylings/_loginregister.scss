@@ -1,0 +1,40 @@
+.outerContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.container {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  position: absolute;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.tab {
+  border: 1px pink solid;
+}
+
+form {
+  border: 1px solid pink;
+}
+
+button {
+  background-color: pink;
+}
+
+button:hover {
+  background-color: hotpink;
+}
+
+button:focus {
+  background-color: pink;
+}
+
+.active {
+  font-weight: bold;
+}
